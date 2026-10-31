@@ -1,27 +1,18 @@
-import { Link, Outlet } from 'react-router';
+import { Link } from "react-router";
+
 
 function Navbar() {
   return (
-    <>
-      <header className="sticky top-0 z-10 bg-[#111111] border-b border-[#333333]">
+      <header className="sticky top-0 z-10 bg-card border-b border-border">
         <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link
-            to="/"
-            className="font-sans font-extrabold text-xl tracking-tight text-white"
-          >
-            RECIPE<span className="text-[#ef3333]">FINDER.</span>
+          <Link to="/" className="font-serif font-bold text-xl text-accent">
+            RecipeFinder
           </Link>
-
-          <Link
-            to="/"
-            className="text-gray-300 hover:text-[#ef3333] font-medium transition-colors"
-          >
+          <Link to="/" className="text-text hover:text-accent font-medium">
             Home
           </Link>
         </nav>
       </header>
-      <Outlet />
-    </>
   );
 }
 

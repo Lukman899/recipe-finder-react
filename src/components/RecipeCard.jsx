@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link } from "react-router";
 
 function RecipeCard({ recipe }) {
   const {
@@ -9,45 +9,31 @@ function RecipeCard({ recipe }) {
     name,
     cuisine,
     difficulty,
-    rating
+    rating,
   } = recipe;
-
   const totalTime = prepTimeMinutes + cookTimeMinutes;
 
   return (
     <Link
-      to={`/recipe-details/${id}`}
-      className="bg-[#1c1c1c] border border-[#333333] rounded-xl hover:border-[#ef3333] transition-colors duration-200 overflow-hidden flex flex-col"
+      to={`/recipe/${id}`}
+      className="bg-card border border-border rounded-md hover:border-accent overflow-hidden flex flex-col"
     >
-      <img
-        src={image}
-        alt={name}
-        className="h-48 w-full object-cover"
-      />
-
+      <img src={image} alt={name} className="h-48 w-full object-cover" />
       <div className="p-4 flex flex-col flex-1">
-        <h3 className="font-sans font-bold text-lg text-white mb-1">
-          {name}
-        </h3>
-
-        <p className="text-sm text-gray-400 mb-3">
+        <h3 className="font-serif font-bold text-lg text-text mb-1">{name}</h3>
+        <p className="text-sm text-muted mb-3">
           {cuisine} - {difficulty}
         </p>
-
         <div className="mt-auto flex justify-between items-center text-sm">
-          <span className="flex items-center gap-1 font-medium text-white">
-            <svg
-              className="w-4 h-4 fill-[#ef3333]"
-              viewBox="0 0 24 24"
-            >
+          <span className="flex items-center gap-1 font-medium">
+            <svg className="w-4 h-4 fill-accent" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
             {rating}
           </span>
-
-          <span className="flex items-center gap-1 text-red-500">
+          <span className="flex items-center gap-1 text-muted">
             <svg
-              className="w-4 h-4 stroke-current fill-none"
+              className="w-4 h-4 stroke-muted fill-none"
               strokeWidth="2"
               viewBox="0 0 24 24"
             >
