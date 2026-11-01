@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #faf6ef;
-  --color-card: #ffffff;
-  --color-text: #2b2b2b;
+  --color-background: Black;
+  --color-card: Black;
+  --color-text: white;
   --color-muted: #6b6b6b;
   --color-accent: #b5472b;
   --color-accent-hover: #8f3820;
-  --color-border: #e3dccf;
+  --color-border: black;
   --font-serif: Georgia, serif;
   --font-sans: Arial, sans-serif;
 }
